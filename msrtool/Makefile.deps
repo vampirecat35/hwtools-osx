@@ -1,0 +1,74 @@
+msrtool.o: msrtool.c /usr/local/include/pci/pci.h \
+  /usr/local/include/pci/config.h /usr/local/include/pci/header.h \
+  /usr/local/include/pci/types.h msrtool.h \
+  /usr/local/include/DirectHW/DirectHW.h
+msrutils.o: msrutils.c msrtool.h /usr/local/include/DirectHW/DirectHW.h \
+  /usr/local/include/pci/pci.h /usr/local/include/pci/config.h \
+  /usr/local/include/pci/header.h /usr/local/include/pci/types.h
+sys.o: sys.c /usr/local/include/pci/pci.h /usr/local/include/pci/config.h \
+  /usr/local/include/pci/header.h /usr/local/include/pci/types.h \
+  msrtool.h /usr/local/include/DirectHW/DirectHW.h
+linux.o: linux.c msrtool.h /usr/local/include/DirectHW/DirectHW.h \
+  /usr/local/include/pci/pci.h /usr/local/include/pci/config.h \
+  /usr/local/include/pci/header.h /usr/local/include/pci/types.h
+darwin.o: darwin.c msrtool.h /usr/local/include/DirectHW/DirectHW.h \
+  /usr/local/include/pci/pci.h /usr/local/include/pci/config.h \
+  /usr/local/include/pci/header.h /usr/local/include/pci/types.h
+freebsd.o: freebsd.c msrtool.h /usr/local/include/DirectHW/DirectHW.h \
+  /usr/local/include/pci/pci.h /usr/local/include/pci/config.h \
+  /usr/local/include/pci/header.h /usr/local/include/pci/types.h
+geodegx2.o: geodegx2.c msrtool.h /usr/local/include/DirectHW/DirectHW.h \
+  /usr/local/include/pci/pci.h /usr/local/include/pci/config.h \
+  /usr/local/include/pci/header.h /usr/local/include/pci/types.h
+geodelx.o: geodelx.c msrtool.h /usr/local/include/DirectHW/DirectHW.h \
+  /usr/local/include/pci/pci.h /usr/local/include/pci/config.h \
+  /usr/local/include/pci/header.h /usr/local/include/pci/types.h
+cs5536.o: cs5536.c msrtool.h /usr/local/include/DirectHW/DirectHW.h \
+  /usr/local/include/pci/pci.h /usr/local/include/pci/config.h \
+  /usr/local/include/pci/header.h /usr/local/include/pci/types.h
+k8.o: k8.c msrtool.h /usr/local/include/DirectHW/DirectHW.h \
+  /usr/local/include/pci/pci.h /usr/local/include/pci/config.h \
+  /usr/local/include/pci/header.h /usr/local/include/pci/types.h
+via_c7.o: via_c7.c msrtool.h /usr/local/include/DirectHW/DirectHW.h \
+  /usr/local/include/pci/pci.h /usr/local/include/pci/config.h \
+  /usr/local/include/pci/header.h /usr/local/include/pci/types.h
+intel_pentium3_early.o: intel_pentium3_early.c msrtool.h \
+  /usr/local/include/DirectHW/DirectHW.h /usr/local/include/pci/pci.h \
+  /usr/local/include/pci/config.h /usr/local/include/pci/header.h \
+  /usr/local/include/pci/types.h
+intel_pentium3.o: intel_pentium3.c msrtool.h \
+  /usr/local/include/DirectHW/DirectHW.h /usr/local/include/pci/pci.h \
+  /usr/local/include/pci/config.h /usr/local/include/pci/header.h \
+  /usr/local/include/pci/types.h
+intel_pentium4_early.o: intel_pentium4_early.c msrtool.h \
+  /usr/local/include/DirectHW/DirectHW.h /usr/local/include/pci/pci.h \
+  /usr/local/include/pci/config.h /usr/local/include/pci/header.h \
+  /usr/local/include/pci/types.h
+intel_pentium4_later.o: intel_pentium4_later.c msrtool.h \
+  /usr/local/include/DirectHW/DirectHW.h /usr/local/include/pci/pci.h \
+  /usr/local/include/pci/config.h /usr/local/include/pci/header.h \
+  /usr/local/include/pci/types.h
+intel_pentium_d.o: intel_pentium_d.c msrtool.h \
+  /usr/local/include/DirectHW/DirectHW.h /usr/local/include/pci/pci.h \
+  /usr/local/include/pci/config.h /usr/local/include/pci/header.h \
+  /usr/local/include/pci/types.h
+intel_core1.o: intel_core1.c msrtool.h \
+  /usr/local/include/DirectHW/DirectHW.h /usr/local/include/pci/pci.h \
+  /usr/local/include/pci/config.h /usr/local/include/pci/header.h \
+  /usr/local/include/pci/types.h
+intel_core2_early.o: intel_core2_early.c msrtool.h \
+  /usr/local/include/DirectHW/DirectHW.h /usr/local/include/pci/pci.h \
+  /usr/local/include/pci/config.h /usr/local/include/pci/header.h \
+  /usr/local/include/pci/types.h
+intel_core2_later.o: intel_core2_later.c msrtool.h \
+  /usr/local/include/DirectHW/DirectHW.h /usr/local/include/pci/pci.h \
+  /usr/local/include/pci/config.h /usr/local/include/pci/header.h \
+  /usr/local/include/pci/types.h
+intel_nehalem.o: intel_nehalem.c msrtool.h \
+  /usr/local/include/DirectHW/DirectHW.h /usr/local/include/pci/pci.h \
+  /usr/local/include/pci/config.h /usr/local/include/pci/header.h \
+  /usr/local/include/pci/types.h
+intel_atom.o: intel_atom.c msrtool.h \
+  /usr/local/include/DirectHW/DirectHW.h /usr/local/include/pci/pci.h \
+  /usr/local/include/pci/config.h /usr/local/include/pci/header.h \
+  /usr/local/include/pci/types.h

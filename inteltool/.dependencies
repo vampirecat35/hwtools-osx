@@ -1,0 +1,145 @@
+ahci.o: ahci.c \
+  /Users/andyvand/Downloads/coreboot-4.13/util/inteltool/inteltool.h \
+  /Users/andyvand/Downloads/coreboot-4.13/src/arch/x86/include/arch/mmio.h \
+  /Users/andyvand/Downloads/coreboot-4.13/src/commonlib/include/commonlib/helpers.h \
+  /Users/andyvand/Downloads/coreboot-4.13/src/commonlib/bsd/include/commonlib/bsd/helpers.h \
+  /Users/andyvand/Downloads/coreboot-4.13/src/commonlib/bsd/include/commonlib/bsd/compiler.h \
+  /usr/local/include/DirectHW/DirectHW.h /usr/local/include/pci/pci.h \
+  /usr/local/include/pci/config.h /usr/local/include/pci/header.h \
+  /usr/local/include/pci/types.h
+amb.o: amb.c \
+  /Users/andyvand/Downloads/coreboot-4.13/util/inteltool/inteltool.h \
+  /Users/andyvand/Downloads/coreboot-4.13/src/arch/x86/include/arch/mmio.h \
+  /Users/andyvand/Downloads/coreboot-4.13/src/commonlib/include/commonlib/helpers.h \
+  /Users/andyvand/Downloads/coreboot-4.13/src/commonlib/bsd/include/commonlib/bsd/helpers.h \
+  /Users/andyvand/Downloads/coreboot-4.13/src/commonlib/bsd/include/commonlib/bsd/compiler.h \
+  /usr/local/include/DirectHW/DirectHW.h /usr/local/include/pci/pci.h \
+  /usr/local/include/pci/config.h /usr/local/include/pci/header.h \
+  /usr/local/include/pci/types.h
+cpu.o: cpu.c \
+  /Users/andyvand/Downloads/coreboot-4.13/util/inteltool/inteltool.h \
+  /Users/andyvand/Downloads/coreboot-4.13/src/arch/x86/include/arch/mmio.h \
+  /Users/andyvand/Downloads/coreboot-4.13/src/commonlib/include/commonlib/helpers.h \
+  /Users/andyvand/Downloads/coreboot-4.13/src/commonlib/bsd/include/commonlib/bsd/helpers.h \
+  /Users/andyvand/Downloads/coreboot-4.13/src/commonlib/bsd/include/commonlib/bsd/compiler.h \
+  /usr/local/include/DirectHW/DirectHW.h /usr/local/include/pci/pci.h \
+  /usr/local/include/pci/config.h /usr/local/include/pci/header.h \
+  /usr/local/include/pci/types.h
+gfx.o: gfx.c \
+  /Users/andyvand/Downloads/coreboot-4.13/util/inteltool/inteltool.h \
+  /Users/andyvand/Downloads/coreboot-4.13/src/arch/x86/include/arch/mmio.h \
+  /Users/andyvand/Downloads/coreboot-4.13/src/commonlib/include/commonlib/helpers.h \
+  /Users/andyvand/Downloads/coreboot-4.13/src/commonlib/bsd/include/commonlib/bsd/helpers.h \
+  /Users/andyvand/Downloads/coreboot-4.13/src/commonlib/bsd/include/commonlib/bsd/compiler.h \
+  /usr/local/include/DirectHW/DirectHW.h /usr/local/include/pci/pci.h \
+  /usr/local/include/pci/config.h /usr/local/include/pci/header.h \
+  /usr/local/include/pci/types.h
+gpio.o: gpio.c \
+  /Users/andyvand/Downloads/coreboot-4.13/util/inteltool/inteltool.h \
+  /Users/andyvand/Downloads/coreboot-4.13/src/arch/x86/include/arch/mmio.h \
+  /Users/andyvand/Downloads/coreboot-4.13/src/commonlib/include/commonlib/helpers.h \
+  /Users/andyvand/Downloads/coreboot-4.13/src/commonlib/bsd/include/commonlib/bsd/helpers.h \
+  /Users/andyvand/Downloads/coreboot-4.13/src/commonlib/bsd/include/commonlib/bsd/compiler.h \
+  /usr/local/include/DirectHW/DirectHW.h /usr/local/include/pci/pci.h \
+  /usr/local/include/pci/config.h /usr/local/include/pci/header.h \
+  /usr/local/include/pci/types.h
+gpio_groups.o: gpio_groups.c \
+  /Users/andyvand/Downloads/coreboot-4.13/util/inteltool/inteltool.h \
+  /Users/andyvand/Downloads/coreboot-4.13/src/arch/x86/include/arch/mmio.h \
+  /Users/andyvand/Downloads/coreboot-4.13/src/commonlib/include/commonlib/helpers.h \
+  /Users/andyvand/Downloads/coreboot-4.13/src/commonlib/bsd/include/commonlib/bsd/helpers.h \
+  /Users/andyvand/Downloads/coreboot-4.13/src/commonlib/bsd/include/commonlib/bsd/compiler.h \
+  /usr/local/include/DirectHW/DirectHW.h /usr/local/include/pci/pci.h \
+  /usr/local/include/pci/config.h /usr/local/include/pci/header.h \
+  /usr/local/include/pci/types.h \
+  /Users/andyvand/Downloads/coreboot-4.13/util/inteltool/pcr.h \
+  /Users/andyvand/Downloads/coreboot-4.13/util/inteltool/gpio_names/apollolake.h \
+  /Users/andyvand/Downloads/coreboot-4.13/util/inteltool/gpio_names/gpio_groups.h \
+  /Users/andyvand/Downloads/coreboot-4.13/util/inteltool/gpio_names/cannonlake.h \
+  /Users/andyvand/Downloads/coreboot-4.13/util/inteltool/gpio_names/cannonlake_lp.h \
+  /Users/andyvand/Downloads/coreboot-4.13/util/inteltool/gpio_names/denverton.h \
+  /Users/andyvand/Downloads/coreboot-4.13/util/inteltool/gpio_names/icelake.h \
+  /Users/andyvand/Downloads/coreboot-4.13/util/inteltool/gpio_names/lewisburg.h \
+  /Users/andyvand/Downloads/coreboot-4.13/util/inteltool/gpio_names/sunrise.h
+inteltool.o: inteltool.c \
+  /Users/andyvand/Downloads/coreboot-4.13/util/inteltool/inteltool.h \
+  /Users/andyvand/Downloads/coreboot-4.13/src/arch/x86/include/arch/mmio.h \
+  /Users/andyvand/Downloads/coreboot-4.13/src/commonlib/include/commonlib/helpers.h \
+  /Users/andyvand/Downloads/coreboot-4.13/src/commonlib/bsd/include/commonlib/bsd/helpers.h \
+  /Users/andyvand/Downloads/coreboot-4.13/src/commonlib/bsd/include/commonlib/bsd/compiler.h \
+  /usr/local/include/DirectHW/DirectHW.h /usr/local/include/pci/pci.h \
+  /usr/local/include/pci/config.h /usr/local/include/pci/header.h \
+  /usr/local/include/pci/types.h \
+  /Users/andyvand/Downloads/coreboot-4.13/util/inteltool/pcr.h
+ivy_memory.o: ivy_memory.c \
+  /Users/andyvand/Downloads/coreboot-4.13/util/inteltool/inteltool.h \
+  /Users/andyvand/Downloads/coreboot-4.13/src/arch/x86/include/arch/mmio.h \
+  /Users/andyvand/Downloads/coreboot-4.13/src/commonlib/include/commonlib/helpers.h \
+  /Users/andyvand/Downloads/coreboot-4.13/src/commonlib/bsd/include/commonlib/bsd/helpers.h \
+  /Users/andyvand/Downloads/coreboot-4.13/src/commonlib/bsd/include/commonlib/bsd/compiler.h \
+  /usr/local/include/DirectHW/DirectHW.h /usr/local/include/pci/pci.h \
+  /usr/local/include/pci/config.h /usr/local/include/pci/header.h \
+  /usr/local/include/pci/types.h
+lpc.o: lpc.c \
+  /Users/andyvand/Downloads/coreboot-4.13/src/commonlib/include/commonlib/helpers.h \
+  /Users/andyvand/Downloads/coreboot-4.13/src/commonlib/bsd/include/commonlib/bsd/helpers.h \
+  /Users/andyvand/Downloads/coreboot-4.13/src/commonlib/bsd/include/commonlib/bsd/compiler.h \
+  /Users/andyvand/Downloads/coreboot-4.13/util/inteltool/inteltool.h \
+  /Users/andyvand/Downloads/coreboot-4.13/src/arch/x86/include/arch/mmio.h \
+  /usr/local/include/DirectHW/DirectHW.h /usr/local/include/pci/pci.h \
+  /usr/local/include/pci/config.h /usr/local/include/pci/header.h \
+  /usr/local/include/pci/types.h
+memory.o: memory.c \
+  /Users/andyvand/Downloads/coreboot-4.13/util/inteltool/inteltool.h \
+  /Users/andyvand/Downloads/coreboot-4.13/src/arch/x86/include/arch/mmio.h \
+  /Users/andyvand/Downloads/coreboot-4.13/src/commonlib/include/commonlib/helpers.h \
+  /Users/andyvand/Downloads/coreboot-4.13/src/commonlib/bsd/include/commonlib/bsd/helpers.h \
+  /Users/andyvand/Downloads/coreboot-4.13/src/commonlib/bsd/include/commonlib/bsd/compiler.h \
+  /usr/local/include/DirectHW/DirectHW.h /usr/local/include/pci/pci.h \
+  /usr/local/include/pci/config.h /usr/local/include/pci/header.h \
+  /usr/local/include/pci/types.h
+pcie.o: pcie.c \
+  /Users/andyvand/Downloads/coreboot-4.13/util/inteltool/inteltool.h \
+  /Users/andyvand/Downloads/coreboot-4.13/src/arch/x86/include/arch/mmio.h \
+  /Users/andyvand/Downloads/coreboot-4.13/src/commonlib/include/commonlib/helpers.h \
+  /Users/andyvand/Downloads/coreboot-4.13/src/commonlib/bsd/include/commonlib/bsd/helpers.h \
+  /Users/andyvand/Downloads/coreboot-4.13/src/commonlib/bsd/include/commonlib/bsd/compiler.h \
+  /usr/local/include/DirectHW/DirectHW.h /usr/local/include/pci/pci.h \
+  /usr/local/include/pci/config.h /usr/local/include/pci/header.h \
+  /usr/local/include/pci/types.h
+pcr.o: pcr.c /Users/andyvand/Downloads/coreboot-4.13/util/inteltool/pcr.h \
+  /Users/andyvand/Downloads/coreboot-4.13/util/inteltool/inteltool.h \
+  /Users/andyvand/Downloads/coreboot-4.13/src/arch/x86/include/arch/mmio.h \
+  /Users/andyvand/Downloads/coreboot-4.13/src/commonlib/include/commonlib/helpers.h \
+  /Users/andyvand/Downloads/coreboot-4.13/src/commonlib/bsd/include/commonlib/bsd/helpers.h \
+  /Users/andyvand/Downloads/coreboot-4.13/src/commonlib/bsd/include/commonlib/bsd/compiler.h \
+  /usr/local/include/DirectHW/DirectHW.h /usr/local/include/pci/pci.h \
+  /usr/local/include/pci/config.h /usr/local/include/pci/header.h \
+  /usr/local/include/pci/types.h
+powermgt.o: powermgt.c \
+  /Users/andyvand/Downloads/coreboot-4.13/src/commonlib/include/commonlib/helpers.h \
+  /Users/andyvand/Downloads/coreboot-4.13/src/commonlib/bsd/include/commonlib/bsd/helpers.h \
+  /Users/andyvand/Downloads/coreboot-4.13/src/commonlib/bsd/include/commonlib/bsd/compiler.h \
+  /Users/andyvand/Downloads/coreboot-4.13/util/inteltool/inteltool.h \
+  /Users/andyvand/Downloads/coreboot-4.13/src/arch/x86/include/arch/mmio.h \
+  /usr/local/include/DirectHW/DirectHW.h /usr/local/include/pci/pci.h \
+  /usr/local/include/pci/config.h /usr/local/include/pci/header.h \
+  /usr/local/include/pci/types.h
+rootcmplx.o: rootcmplx.c \
+  /Users/andyvand/Downloads/coreboot-4.13/util/inteltool/inteltool.h \
+  /Users/andyvand/Downloads/coreboot-4.13/src/arch/x86/include/arch/mmio.h \
+  /Users/andyvand/Downloads/coreboot-4.13/src/commonlib/include/commonlib/helpers.h \
+  /Users/andyvand/Downloads/coreboot-4.13/src/commonlib/bsd/include/commonlib/bsd/helpers.h \
+  /Users/andyvand/Downloads/coreboot-4.13/src/commonlib/bsd/include/commonlib/bsd/compiler.h \
+  /usr/local/include/DirectHW/DirectHW.h /usr/local/include/pci/pci.h \
+  /usr/local/include/pci/config.h /usr/local/include/pci/header.h \
+  /usr/local/include/pci/types.h
+spi.o: spi.c \
+  /Users/andyvand/Downloads/coreboot-4.13/util/inteltool/inteltool.h \
+  /Users/andyvand/Downloads/coreboot-4.13/src/arch/x86/include/arch/mmio.h \
+  /Users/andyvand/Downloads/coreboot-4.13/src/commonlib/include/commonlib/helpers.h \
+  /Users/andyvand/Downloads/coreboot-4.13/src/commonlib/bsd/include/commonlib/bsd/helpers.h \
+  /Users/andyvand/Downloads/coreboot-4.13/src/commonlib/bsd/include/commonlib/bsd/compiler.h \
+  /usr/local/include/DirectHW/DirectHW.h /usr/local/include/pci/pci.h \
+  /usr/local/include/pci/config.h /usr/local/include/pci/header.h \
+  /usr/local/include/pci/types.h
