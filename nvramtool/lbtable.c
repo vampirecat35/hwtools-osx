@@ -15,6 +15,52 @@
 #include "hexdump.h"
 #include "cbfs.h"
 
+#ifdef __APPLE__
+#define PMEM_ERROR_LOG printf
+
+#include <sys/ioctl.h>
+
+#include "pmem_ioctls.h"
+
+unsigned int get_mmap(uint8_t **mmap, unsigned int *mmap_size, unsigned int *mmap_desc_size, int device_file);
+
+unsigned int get_mmap(uint8_t **mmap, unsigned int *mmap_size, unsigned int *mmap_desc_size, int device_file) {
+    int err;
+    int status = EXIT_FAILURE;
+    
+    err = ioctl(device_file, PMEM_IOCTL_GET_MMAP_SIZE, mmap_size);
+    if (err != 0) {
+        PMEM_ERROR_LOG("Error getting size of memory map");
+        goto error;
+    }
+    err = ioctl(device_file, PMEM_IOCTL_GET_MMAP_DESC_SIZE, mmap_desc_size);
+    if (err != 0) {
+        PMEM_ERROR_LOG("Error getting size of memory map descriptors");
+        goto error;
+    }
+
+#ifdef DEBUG
+    printf("Recieved memory map, size:%d bytes (descriptors: %d)\n", *mmap_size, *mmap_desc_size);
+#endif
+
+    // Allocate buffer of apropriate size.
+    *mmap = (uint8_t *)malloc(*mmap_size);
+    if (*mmap == NULL) {
+        PMEM_ERROR_LOG("Could not allocate buffer for memory map");
+        goto error;
+    }
+    // Ask the driver to fill it with the physical memory map.
+    if ((err = ioctl(device_file, PMEM_IOCTL_GET_MMAP, mmap)) != 0) {
+        PMEM_ERROR_LOG("Error getting memory map");
+        free(*mmap);
+        goto error;
+    }
+    status = EXIT_SUCCESS;
+error:
+    return status;
+}
+#endif
+
 typedef void (*lbtable_print_fn_t) (const struct lb_record * rec);
 
 /* This structure represents an item in the coreboot table that may be
@@ -217,6 +263,10 @@ static const hexdump_format_t format =
  ****************************************************************************/
 static void map_pages(unsigned long base_address, unsigned long length)
 {
+#ifdef __APPLE__
+    unsigned int mapsize = 0;
+    unsigned int mapdescsize = 0;
+#endif
 	unsigned long num_pages = (length +
 			(base_address & (getpagesize() - 1)) +
 			getpagesize() - 1) >> 12;
@@ -227,20 +277,26 @@ static void map_pages(unsigned long base_address, unsigned long length)
 		return;
 	}
 
+#if defined(__APPLE__) && defined(__MACH__)
+    if (get_mmap((uint8_t **)&low_phys_mem, &mapsize, &mapdescsize, fd) != EXIT_SUCCESS) {
+        fprintf(stderr,
+                "%s: Failed to mmap /dev/pmem at %lx: %s\n",
+                prog_name, base_address, strerror(errno));
+        exit(1);
+    }
+    low_phys_mem += base_address;
+#else
 	if (low_phys_mem) {
 		munmap((void *)low_phys_mem, mapped_pages << 12);
 	}
 	if ((low_phys_mem = mmap(NULL, num_pages << 12, PROT_READ, MAP_SHARED, fd,
 		  (off_t) base_address)) == MAP_FAILED) {
 		fprintf(stderr,
-#if defined(__APPLE__) && defined(__MACH__)
-            "%s: Failed to mmap /dev/pmem at %lx: %s\n",
-#else
 			"%s: Failed to mmap /dev/mem at %lx: %s\n",
-#endif
 			prog_name, base_address, strerror(errno));
 		exit(1);
 	}
+#endif
 	low_phys_base = base_address;
 }
 
