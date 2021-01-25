@@ -10,10 +10,12 @@ int intel_nehalem_probe(const struct targetdef *target, const struct cpuid_t *id
 		(0x1f == id->model) ||
 		(0x2e == id->model) ||
 		(0x25 == id->model) ||	/* westmere */
-		(0x2c == id->model) ||	/* westmere */
+        (0x2a == id->model) ||  /* sandybridge */
+		(0x2c == id->model) ||	/* gulftown */
 		(0x2f == id->model) ||	/* westmere */
         (0x2a == id->model) ||  /* westmere ex */
 		(0x2d == id->model) ||  /* jaketown */
+        (0x2e == id->model) ||  /* nehalem ex */
 		(0x3a == id->model) ||  /* ivybridge */
         (0x3c == id->model) ||  /* hasswell */
         (0x3d == id->model) ||  /* broadwell */
