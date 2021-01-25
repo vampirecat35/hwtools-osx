@@ -12,20 +12,24 @@ int intel_nehalem_probe(const struct targetdef *target, const struct cpuid_t *id
 		(0x25 == id->model) ||	/* westmere */
 		(0x2c == id->model) ||	/* westmere */
 		(0x2f == id->model) ||	/* westmere */
-		(0x30 == id->model) ||
-		(0x31 == id->model) ||
-		(0x32 == id->model) ||
-		(0x33 == id->model) ||
-		(0x34 == id->model) ||
-		(0x35 == id->model) ||
-		(0x36 == id->model) ||
-		(0x37 == id->model) ||
-		(0x38 == id->model) ||
-		(0x39 == id->model) ||
-		(0x3a == id->model) ||
-		(0x3b == id->model) ||
-		(0x3c == id->model) ||
-		(0x3d == id->model)
+        (0x2a == id->model) ||  /* westmere ex */
+		(0x2d == id->model) ||  /* jaketown */
+		(0x3a == id->model) ||  /* ivybridge */
+        (0x3c == id->model) ||  /* hasswell */
+        (0x3d == id->model) ||  /* broadwell */
+		(0x3e == id->model) ||  /* ivybridge ep */
+        (0x3f == id->model) ||  /* hasswell ep */
+        (0x45 == id->model) ||  /* haswell ult */
+		(0x46 == id->model) ||  /* crystalwell */
+		(0x47 == id->model) ||  /* brystallwell */
+		(0x4e == id->model) ||  /* skylake */
+        (0x55 == id->model) ||  /* skylake w */
+		(0x5e == id->model) ||  /* skylake dt */
+        (0x7d == id->model) ||  /* icelake dt */
+        (0x7e == id->model) ||  /* icelake */
+		(0x8e == id->model) ||  /* kabylake */
+		(0x9e == id->model) ||  /* kabylake dt */
+        (0x9f == id->model)     /* icelake h */
 		));
 }
 
