@@ -233,7 +233,11 @@ static void map_pages(unsigned long base_address, unsigned long length)
 	if ((low_phys_mem = mmap(NULL, num_pages << 12, PROT_READ, MAP_SHARED, fd,
 		  (off_t) base_address)) == MAP_FAILED) {
 		fprintf(stderr,
+#if defined(__APPLE__) && defined(__MACH__)
+            "%s: Failed to mmap /dev/pmem at %lx: %s\n",
+#else
 			"%s: Failed to mmap /dev/mem at %lx: %s\n",
+#endif
 			prog_name, base_address, strerror(errno));
 		exit(1);
 	}
@@ -256,8 +260,13 @@ void get_lbtable(void)
 	 * conveniently accessed by calling mmap() on /dev/mem.
 	 */
 
+#if defined(__APPLE__) && defined(__MACH__)
+    if ((fd = open("/dev/pmem", O_RDONLY, 0)) < 0) {
+        fprintf(stderr, "%s: Can not open /dev/pmem for reading: %s\n",
+#else
 	if ((fd = open("/dev/mem", O_RDONLY, 0)) < 0) {
-		fprintf(stderr, "%s: Can not open /dev/mem for reading: %s\n",
+        fprintf(stderr, "%s: Can not open /dev/mem for reading: %s\n",
+#endif
 			prog_name, strerror(errno));
 		exit(1);
 	}
